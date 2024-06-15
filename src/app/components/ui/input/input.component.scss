@@ -6,10 +6,12 @@
   border-bottom: 2px solid gray;
   height: 35px;
   width: 100%;
+  border-radius: 0;
   &:focus {
     outline: none;
   }
   &::placeholder {
     color: gray;
+    letter-spacing: 1px;
   }
 }
