@@ -67,6 +67,10 @@ export class TeamComponent implements OnInit, OnDestroy {
         {
           name: 'LinkedIn',
           url: 'https://www.linkedin.com/in/garaújo/'
+        },
+        {
+          name: 'Github',
+          url: 'https://github.com/theMyntt'
         }
       ],
       show: false
