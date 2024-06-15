@@ -21,9 +21,10 @@
   display: flex;
   border-radius: 15px;
   flex-direction: column;
+  width: 60%;
+  gap: 20px;
   a,
   p {
-    gap: 20px;
     color: white;
     text-decoration: underline;
     transition: 0.3s;

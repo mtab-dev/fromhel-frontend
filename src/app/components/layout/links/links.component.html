@@ -1,8 +1,8 @@
 <div class="overlay"></div>
 <div class="links">
+  <h2>Links para as Redes Sociais</h2>
   @for (link of links; track $index) {
     <a href="{{ link.url }}">{{ link.name }}</a>
   }
-  <br />
   <p (click)="onClick()">Voltar</p>
 </div>
