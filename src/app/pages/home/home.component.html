@@ -1,3 +1,6 @@
+@if (this.showSubscribe) {
+  <app-subscribe [handleCancelSubscribe]="handleCancelSubscribe"/>
+}
 <div class="container" id="start">
   <div class="brand-container">
     <img src="/cordel.png" />
@@ -15,6 +18,9 @@
         descubra mais sobre a narrativa e clique no botão a baixo para se
         inscrever nos testes da demo.
       </p>
+    </section>
+    <section class="section">
+      <app-button text="inscreva-se" variant="secondary" (click)="showSubscribe = !showSubscribe"/>
     </section>
     <section class="section">
       <img src="/janio.webp" id="janio" />
