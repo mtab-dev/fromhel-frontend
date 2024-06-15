@@ -1,0 +1,41 @@
+.container {
+  .brand-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    img {
+      width: 70%;
+      margin-bottom: 50px;
+      @media (min-width: 900px) {
+        width: 40%;
+      }
+    }
+    margin-bottom: 100px;
+  }
+  article {
+    @media (min-width: 900px) {
+      width: 60%;
+      margin: 0 auto;
+    }
+    .section {
+      img {
+        width: 90%;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      p {
+        margin-top: 40px;
+        letter-spacing: 1px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+      margin-bottom: 40px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
