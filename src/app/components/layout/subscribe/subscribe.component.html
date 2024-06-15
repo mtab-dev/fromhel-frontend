@@ -1,0 +1,11 @@
+<div class="overlay"></div>
+<div class="container">
+  <label for="name">Nome:</label>
+  <app-input placeholder="Digite seu nome" id="name" name="name" [keyUp]="handleNameChange" />
+  <label for="email">Email:</label>
+  <app-input placeholder="Digite seu MELHOR email" id="email" name="email" type="email" [keyUp]="handleEmailChange" />
+  <div>
+    <app-button text="Enviar" />
+    <app-button text="Cancelar" (click)="handleCancelSubscribe()" variant="secondary" />
+  </div>
+</div>
