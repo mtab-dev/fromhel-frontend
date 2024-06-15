@@ -29,7 +29,8 @@ $headerSize: 180px;
     top: 136px;
     align-items: flex-end;
     flex-direction: column;
-    background-color: styles.$obsidian;
+    background-color: rgba($color: styles.$obsidian, $alpha: 0.3);
+    backdrop-filter: blur(25px);
     @media (max-width: 899px) {
       left: 0;
     }
