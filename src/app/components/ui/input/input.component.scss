@@ -1,0 +1,14 @@
+@use "../../../../styles.scss";
+
+.inp {
+  background-color: styles.$obsidian;
+  border: 0;
+  border-bottom: 2px solid gray;
+  height: 35px;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: gray;
+  }
+}
