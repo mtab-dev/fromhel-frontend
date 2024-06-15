@@ -1,10 +1,10 @@
 <div class="container">
   <div class="brand-container">
     <img src="/cordel.png" />
-    <app-button text="saiba mais" type="button" />
+    <app-button text="saiba mais" type="button" (click)="redirect('home#about')" />
   </div>
   <article>
-    <section class="section">
+    <section class="section" id="about">
       <img src="/cruz.webp" id="cruz" />
       <p>
         Cordel Do Mandacaru é o mais novo jogo da recém formada produtora de
