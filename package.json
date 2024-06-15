@@ -1,6 +1,7 @@
 {
   "name": "fromhel-frontend",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "license": "ISC",
   "scripts": {
     "ng": "ng",
     "start:dev": "ng serve",
