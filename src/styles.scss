@@ -1,10 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-$obsidian: #0b1215;
+$obsidian: #110f0f;
 
 * {
   color: #fff;
   margin: 0;
   padding: 0;
+  font-family: 'Inter Tight', sans-serif;
+  line-height: 1.6;
 }
 
 html {
