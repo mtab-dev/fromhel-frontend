@@ -11,7 +11,7 @@ Website created for FromHel Studio, made with Angular v17
           
 </div>
 
-## Prê-requiriments
+## Pré-requiriments
 
 - NodeJS v20.11.1
 - Yarn v1.22.22
