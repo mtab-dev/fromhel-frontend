@@ -5,7 +5,7 @@ export const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    title: 'FromHel Studios'
+    title: 'FromHel Studio'
   },
   {
     path: '**',
