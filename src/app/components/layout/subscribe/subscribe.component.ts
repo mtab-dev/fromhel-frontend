@@ -13,7 +13,7 @@ export class SubscribeComponent {
   name: string = ''
   email: string = ''
 
-  @Input() handleCancelSubscribe: () => void = () => { }
+  @Input() handleCancelSubscribe: () => void = () => {}
 
   handleNameChange(e: any): void {
     this.name = e.target.value

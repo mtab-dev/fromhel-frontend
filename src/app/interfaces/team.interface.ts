@@ -1,8 +1,9 @@
-import { ISocial } from "./social.interface";
+import { ISocial } from './social.interface'
 
 export interface ITeam {
-  image?: string,
-  name: string,
-  role: string,
+  image?: string
+  name: string
+  role: string
   social?: Array<ISocial>
+  show: boolean
 }

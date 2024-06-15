@@ -1,4 +1,4 @@
-import { Component, WritableSignal, signal } from '@angular/core';
+import { Component, WritableSignal, signal } from '@angular/core'
 
 @Component({
   selector: 'app-header',

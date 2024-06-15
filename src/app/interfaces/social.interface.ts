@@ -1,4 +1,4 @@
 export interface ISocial {
-  name: string,
+  name: string
   url: string
 }
