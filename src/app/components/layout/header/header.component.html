@@ -8,7 +8,6 @@
     class="icon list-icon"
     viewBox="0 0 16 16"
     (click)="toggleMenu()"
-    (blur)="showMenu.set(false)"
   >
     <path
       fill-rule="evenodd"
@@ -17,7 +16,7 @@
   </svg>
   @if (this.showMenu()) {
     <div class="menu">
-      <a href="/home">Inicio</a>
+      <a href="/home#start">Inicio</a>
       <a href="/home#about">Sobre</a>
     </div>
   }
