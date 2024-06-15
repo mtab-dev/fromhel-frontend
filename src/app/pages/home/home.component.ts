@@ -9,5 +9,7 @@ import { ButtonComponent } from '../../components/ui/button/button.component';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
+  redirect(where: string): void {
+    location.href = where;
+  }
 }
