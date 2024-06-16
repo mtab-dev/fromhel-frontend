@@ -59,6 +59,16 @@ $headerSize: 180px;
       width: 200px;
       padding: 40px;
       border-radius: 15px;
+      animation-name: openingAnima;
+      animation-duration: 0.5s;
+      @keyframes openingAnima {
+        0% {
+          transform: translateY(-10%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
     }
     a {
       color: #fff;
