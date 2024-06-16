@@ -20,6 +20,7 @@ $headerSize: 180px;
     background-size: cover;
     background-position-y: -21px;
     background-position-x: -18px;
+    z-index: 3;
   }
   .menu {
     padding: 10px 40px;
@@ -31,10 +32,26 @@ $headerSize: 180px;
     flex-direction: column;
     background-color: rgba($color: styles.$obsidian, $alpha: 0.3);
     backdrop-filter: blur(25px);
+    z-index: 2;
     @media (max-width: 899px) {
+      top: 0;
       left: 0;
-      padding: 40px;
+      height: 100vh;
       background-color: styles.$obsidian;
+      justify-content: center;
+      padding-bottom: 5cm;
+      animation-name: blurAnima;
+      animation-duration: 0.5s;
+      @keyframes blurAnima {
+        0% {
+          opacity: 0;
+          filter: blur(10px);
+        }
+        100% {
+          opacity: 1;
+          filter: blur(0);
+        }
+      }
     }
     @media (min-width: 900px) {
       right: 40px;
@@ -67,4 +84,8 @@ $headerSize: 180px;
 }
 .block {
   margin-top: $headerSize;
+}
+
+#menu-icon {
+  z-index: 3;
 }
