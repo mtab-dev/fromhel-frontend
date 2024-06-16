@@ -13,4 +13,9 @@ export class HeaderComponent {
   toggleMenu(): void {
     this.showMenu.set(!this.showMenu())
   }
+
+  async disableMenu(): Promise<void> {
+    await new Promise((resolve) => setTimeout(resolve, 500))
+    this.showMenu.set(false)
+  }
 }

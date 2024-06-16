@@ -17,9 +17,9 @@
   </svg>
   @if (this.showMenu()) {
     <div class="menu">
-      <a href="/">Inicio</a>
-      <a href="/home#about">Sobre</a>
-      <a href="/team">Equipe</a>
+      <a href="/" (click)="disableMenu()">Inicio</a>
+      <a href="/home#about" (click)="disableMenu()">Sobre</a>
+      <a href="/team" (click)="disableMenu()">Equipe</a>
     </div>
   }
 </header>
