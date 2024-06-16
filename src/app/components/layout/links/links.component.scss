@@ -8,6 +8,16 @@
   bottom: 0;
   background-color: rgba($color: styles.$obsidian, $alpha: 0.3);
   backdrop-filter: blur(25px);
+  animation-name: openingAnima;
+  animation-duration: 1s;
+  @keyframes openingAnima {
+    0% {
+      backdrop-filter: blur(0px);
+    }
+    100% {
+      backdrop-filter: blur(25px);
+    }
+  }
 }
 
 .links {
@@ -23,6 +33,8 @@
   flex-direction: column;
   width: 60%;
   gap: 20px;
+  animation-name: openingAnima;
+  animation-duration: 1s;
   a,
   p {
     color: white;
@@ -30,6 +42,14 @@
     transition: 0.3s;
     &:hover {
       color: yellow;
+    }
+  }
+  @keyframes openingAnima {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 }
