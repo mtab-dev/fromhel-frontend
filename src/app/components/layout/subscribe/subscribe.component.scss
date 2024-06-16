@@ -8,6 +8,16 @@
   bottom: 0;
   background-color: rgba($color: styles.$obsidian, $alpha: 0.3);
   backdrop-filter: blur(25px);
+  animation-name: openingAnima;
+  animation-duration: 1s;
+  @keyframes openingAnima {
+    0% {
+      backdrop-filter: blur(0px);
+    }
+    100% {
+      backdrop-filter: blur(25px);
+    }
+  }
 }
 
 .container {
@@ -19,6 +29,8 @@
   background-color: styles.$obsidian;
   border-radius: 15px;
   width: 60%;
+  animation-name: openingAnima;
+  animation-duration: 1s;
   z-index: 3;
   app-input {
     margin-bottom: 20px;
@@ -29,6 +41,14 @@
     gap: 10px;
     @media (min-width: 900px) {
       flex-direction: row;
+    }
+  }
+  @keyframes openingAnima {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 }
