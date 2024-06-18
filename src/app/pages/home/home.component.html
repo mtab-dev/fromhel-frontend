@@ -1,40 +1,39 @@
 @if (this.showSubscribe) {
-<app-subscribe [handleCancelSubscribe]="handleCancelSubscribe" />
+  <app-subscribe [handleCancelSubscribe]="handleCancelSubscribe" />
 }
 <div class="container" id="start">
   <div class="brand-container">
     <img src="/bulletBanner.png" />
-    <app-button 
-    text="saiba mais" 
-    type="button" 
-    (click)="redirect('home#about')" 
+    <app-button
+      text="saiba mais"
+      type="button"
+      (click)="redirect('home#about-bullet')"
     />
   </div>
   <article>
-    <section class="section" id="about">
+    <section class="section" id="about-bullet">
       <img src="/bulletHouse.png" id="bulletHouse" />
       <h1>BulletSpell</h1>
       <p>
-        "BulletSpeel: A odisseia de João e Maria", primeiro jogo feito pela FromHel, produzido antes de oficialmente nos
-        tornamos uma empresa. Foi feito exclusivamente para o festival de jogos da Etec Heliópolis de 2024, e o mesmo
-        vencedor unânime.
-        O jogo fala sobre o clássico conto de João e Maria, mas de uma peculiar.. Maria foi sequestrada pela Bruxa e
-        agora joão vai ao seu resgate!
-        Abaixo você pode tanto acessar o jogo pela plataforma <i>GameJolt</i>, tanto deixar seu email, para que possamos enviar uma cópia para você. 
+        "BulletSpeel: A odisseia de João e Maria", primeiro jogo feito pela
+        FromHel, produzido antes de oficialmente nos tornamos uma empresa. Foi
+        feito exclusivamente para o festival de jogos da Etec Heliópolis de
+        2024, e o mesmo vencedor unânime. O jogo fala sobre o clássico conto de
+        João e Maria, mas de uma peculiar.. Maria foi sequestrada pela Bruxa e
+        agora joão vai ao seu resgate! Abaixo você pode tanto acessar o jogo
+        pela plataforma <i>GameJolt</i>, tanto deixar seu email, para que
+        possamos enviar uma cópia para você.
       </p>
     </section>
-    <section class="download-buttons">
-      <app-button 
-      text="gamejolt" 
-      variant="primary" 
-      />
-      <app-button 
-      text="inscreva-se" 
-      variant="secondary" 
-      (click)="showSubscribe = !showSubscribe" 
+    <section class="action-buttons">
+      <app-button text="gamejolt" variant="primary" />
+      <app-button
+        text="inscreva-se"
+        variant="secondary"
+        (click)="showSubscribe = !showSubscribe"
       />
     </section>
-    <section class="section">
+    <section class="section" id="about-cordel">
       <img src="/janio.webp" id="janio" />
       <p>
         Jânio e sua Família moram em uma vila no sertão pacato, em um dia comum
