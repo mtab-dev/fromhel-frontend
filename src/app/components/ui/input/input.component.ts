@@ -21,5 +21,5 @@ export class InputComponent {
   @Input() type: 'text' | 'email' | 'password' = 'text'
   @Input() placeholder: string = ''
   @Input() name: string = ''
-  @Input() keyUp: (e: any) => void = (e: any) => {}
+  @Input() keyUp: (e: any) => void = () => {}
 }
