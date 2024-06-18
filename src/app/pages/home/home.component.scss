@@ -5,10 +5,10 @@
     justify-content: center;
     flex-direction: column;
     img {
-      width: 70%;
+      width: 90%;
       margin-bottom: 100px;
       @media (min-width: 900px) {
-        width: 40%;
+        width: 50%;
       }
     }
     margin-bottom: 100px;
@@ -18,14 +18,30 @@
       width: 60%;
       margin: 0 auto;
     }
+    .download-buttons{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
     .section {
+      #bulletHouse{
+        margin-bottom: 20px
+      }
       img {
         width: 90%;
       }
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
+      h1{
+        letter-spacing: 2px;
+        text-align: center;
+        font-size: 25px;
+      }
       p {
         margin-top: 40px;
         letter-spacing: 1px;

@@ -1,33 +1,37 @@
 @if (this.showSubscribe) {
-  <app-subscribe [handleCancelSubscribe]="handleCancelSubscribe" />
+<app-subscribe [handleCancelSubscribe]="handleCancelSubscribe" />
 }
 <div class="container" id="start">
   <div class="brand-container">
-    <img src="/cordel.webp" />
-    <app-button
-      text="saiba mais"
-      type="button"
-      (click)="redirect('home#about')"
+    <img src="/bulletBanner.png" />
+    <app-button 
+    text="saiba mais" 
+    type="button" 
+    (click)="redirect('home#about')" 
     />
   </div>
   <article>
     <section class="section" id="about">
-      <img src="/cruz.webp" id="cruz" />
+      <img src="/bulletHouse.png" id="bulletHouse" />
+      <h1>BulletSpell</h1>
       <p>
-        Cordel Do Mandacaru é o mais novo jogo da recém formada produtora de
-        jogos FromHel Studio. O jogo está em processo de desenvolvimento e em
-        breve será lançado nas plataformas para computadores. Seu
-        desenvolvimento está atrelado ao trabalho de conclusão de curso do curso
-        Programação de Jogos Digitais da ETEC Heliópolis. Role um pouco a tela e
-        descubra mais sobre a narrativa e clique no botão a baixo para se
-        inscrever nos testes da demo.
+        "BulletSpeel: A odisseia de João e Maria", primeiro jogo feito pela FromHel, produzido antes de oficialmente nos
+        tornamos uma empresa. Foi feito exclusivamente para o festival de jogos da Etec Heliópolis de 2024, e o mesmo
+        vencedor unânime.
+        O jogo fala sobre o clássico conto de João e Maria, mas de uma peculiar.. Maria foi sequestrada pela Bruxa e
+        agora joão vai ao seu resgate!
+        Abaixo você pode tanto acessar o jogo pela plataforma <i>GameJolt</i>, tanto deixar seu email, para que possamos enviar uma cópia para você. 
       </p>
     </section>
-    <section class="section">
-      <app-button
-        text="inscreva-se"
-        variant="secondary"
-        (click)="showSubscribe = !showSubscribe"
+    <section class="download-buttons">
+      <app-button 
+      text="gamejolt" 
+      variant="primary" 
+      />
+      <app-button 
+      text="inscreva-se" 
+      variant="secondary" 
+      (click)="showSubscribe = !showSubscribe" 
       />
     </section>
     <section class="section">
@@ -41,6 +45,15 @@
         em tudo. Em meio a toda essa confusão, na tentativa de ajudar, Jânio vê
         sua família sendo morta em chamas. Carregando esse ódio Jânio parte em
         busca de vingança.
+      </p>
+      <p>
+        Cordel Do Mandacaru é o mais novo jogo da recém formada produtora de
+        jogos FromHel Studio. O jogo está em processo de desenvolvimento e em
+        breve será lançado nas plataformas para computadores. Seu
+        desenvolvimento está atrelado ao trabalho de conclusão de curso do curso
+        Programação de Jogos Digitais da ETEC Heliópolis. Role um pouco a tela e
+        descubra mais sobre a narrativa e clique no botão a baixo para se
+        inscrever nos testes da demo.
       </p>
     </section>
   </article>
