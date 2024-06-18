@@ -4,6 +4,12 @@
   background-color: yellow;
   color: #000;
   border: 2px solid yellow;
+  transition: 0.3s;
+
+  &:hover{
+    background-color: styles.$obsidian;
+    color: yellow;
+  }
 }
 
 .btn.btn-secondary {
