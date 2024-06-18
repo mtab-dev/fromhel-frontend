@@ -149,7 +149,7 @@ export class TeamComponent implements OnInit, OnDestroy {
     }
   ]
 
-  constructor(private cdr: ChangeDetectorRef) { }
+  constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
     document.addEventListener('keydown', this.handleEscape)
