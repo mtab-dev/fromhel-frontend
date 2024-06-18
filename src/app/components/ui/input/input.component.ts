@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, EventEmitter, Input, Output } from '@angular/core'
 
 @Component({
   selector: 'app-input',
@@ -10,8 +10,8 @@ import { Component, Input } from '@angular/core'
       [placeholder]="placeholder"
       class="inp"
       [name]="name"
-      (change)="keyUp($event)"
       autocomplete="off"
+      (input)="onInputChange($event)"
     />
   `,
   styleUrls: ['./input.component.scss']
@@ -21,5 +21,11 @@ export class InputComponent {
   @Input() type: 'text' | 'email' | 'password' = 'text'
   @Input() placeholder: string = ''
   @Input() name: string = ''
-  @Input() keyUp: (e: any) => void = () => {}
+
+  @Output() valueChange: EventEmitter<string> = new EventEmitter<string>()
+
+  onInputChange(event: Event): void {
+    const value = (event.target as HTMLInputElement).value
+    this.valueChange.emit(value)
+  }
 }
