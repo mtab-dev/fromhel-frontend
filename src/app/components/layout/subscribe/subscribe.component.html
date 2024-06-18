@@ -5,7 +5,7 @@
     placeholder="Digite seu nome"
     id="name"
     name="name"
-    [keyUp]="handleNameChange"
+    (valueChange)="handleNameChange($event)"
   />
   <label for="email">Email:</label>
   <app-input
@@ -13,10 +13,10 @@
     id="email"
     name="email"
     type="email"
-    [keyUp]="handleEmailChange"
+    (valueChange)="handleEmailChange($event)"
   />
   <div>
-    <app-button text="Enviar" />
+    <app-button text="Enviar" (click)="submit()" />
     <app-button
       text="Cancelar"
       (click)="handleCancelSubscribe()"
