@@ -26,6 +26,10 @@ export class HomeComponent {
     this.cdr.detectChanges()
   }
 
+  handleSubscribeOutput(value: boolean) {
+    this.showSubscribe = !value
+  }
+
   redirect(where: string): void {
     location.href = where
   }
