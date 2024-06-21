@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core'
 import { InputComponent } from '../../ui/input/input.component'
 import { ButtonComponent } from '../../ui/button/button.component'
 import { HttpClient } from '@angular/common/http'
-import { ENVIROMENTS } from '../../../config/env'
+// import { ENVIROMENTS } from '../../../config/env'
 
 @Component({
   selector: 'app-subscribe',
@@ -20,12 +20,12 @@ export class SubscribeComponent {
   constructor(private httpClient: HttpClient) {}
 
   submit() {
-    const apiUrl = ENVIROMENTS.API_URL
+    // const apiUrl = ENVIROMENTS.API_URL
 
     if (!this.name || !this.email) return
 
     this.httpClient
-      .post(`${apiUrl}clients/register`, {
+      .post('https://fromhel-backend.vercel.app/register', {
         clientName: this.name.toUpperCase(),
         email: this.email.toLowerCase()
       })
