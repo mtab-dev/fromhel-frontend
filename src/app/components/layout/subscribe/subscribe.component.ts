@@ -13,7 +13,7 @@ import { HttpClient } from '@angular/common/http'
 })
 export class SubscribeComponent {
   name: string = ''
-  email: string = ''
+  clientEmail: string = ''
 
   @Input() handleCancelSubscribe: () => void = () => {}
 
@@ -22,12 +22,12 @@ export class SubscribeComponent {
   submit() {
     // const apiUrl = ENVIROMENTS.API_URL
 
-    if (!this.name || !this.email) return
+    if (!this.name || !this.clientEmail) return
 
     this.httpClient
       .post('https://fromhel-backend.vercel.app/register', {
         clientName: this.name.toUpperCase(),
-        email: this.email.toLowerCase()
+        clientEmail: this.clientEmail.toLowerCase()
       })
       .subscribe(
         (response) => {
@@ -44,6 +44,6 @@ export class SubscribeComponent {
   }
 
   handleEmailChange(value: string): void {
-    this.email = value
+    this.clientEmail = value
   }
 }
