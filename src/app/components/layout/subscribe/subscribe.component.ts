@@ -27,7 +27,7 @@ export class SubscribeComponent {
     this.httpClient
       .post('https://fromhel-backend.vercel.app/register', {
         clientName: this.name.toUpperCase(),
-        clientEmail: this.clientEmail.toLowerCase()
+        email: this.clientEmail.toLowerCase()
       })
       .subscribe(
         (response) => {
