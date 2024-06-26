@@ -26,12 +26,16 @@
       </p>
     </section>
     <section class="action-buttons">
-      <app-button text="gamejolt" variant="primary" />
+      <app-button 
+        text="gamejolt"
+        variant="primary"
+        (click)="redirect('https://gamejolt.com/@FromHelStudio')"
+      ></app-button>
       <app-button
         text="inscreva-se"
         variant="secondary"
         (click)="showSubscribe = !showSubscribe"
-      />
+      ></app-button>
     </section>
     <section class="section" id="about-cordel">
       <img src="/janio.webp" id="janio" />
