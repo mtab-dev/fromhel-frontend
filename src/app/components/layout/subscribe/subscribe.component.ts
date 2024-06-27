@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { InputComponent } from '../../ui/input/input.component'
 import { ButtonComponent } from '../../ui/button/button.component'
 import { HttpClient } from '@angular/common/http'
-import { ENVIROMENTS } from '../../../config/env'
+// import { ENVIROMENTS } from '../../../config/env'
 
 @Component({
   selector: 'app-subscribe',
@@ -13,7 +13,7 @@ import { ENVIROMENTS } from '../../../config/env'
 })
 export class SubscribeComponent {
   name: string = ''
-  email: string = ''
+  clientEmail: string = ''
 
   @Input() handleCancelSubscribe: () => void = () => {}
 
@@ -22,14 +22,14 @@ export class SubscribeComponent {
   @Output() sucess: EventEmitter<boolean> = new EventEmitter<boolean>()
 
   submit() {
-    const apiUrl = ENVIROMENTS.API_URL
+    // const apiUrl = ENVIROMENTS.API_URL
 
-    if (!this.name || !this.email) return
+    if (!this.name || !this.clientEmail) return
 
     this.httpClient
-      .post(`${apiUrl}/register`, {
+    .post('https://fromhel-backend.vercel.app/register', {
         clientName: this.name.toUpperCase(),
-        email: this.email.toLowerCase()
+        email: this.clientEmail.toLowerCase()
       })
       .subscribe(
         () => {
@@ -46,6 +46,6 @@ export class SubscribeComponent {
   }
 
   handleEmailChange(value: string): void {
-    this.email = value
+    this.clientEmail = value
   }
 }
