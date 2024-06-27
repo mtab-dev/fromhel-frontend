@@ -1,7 +1,7 @@
 @if (this.showSubscribe) {
   <app-subscribe
     [handleCancelSubscribe]="handleCancelSubscribe"
-    (sucess)="(handleCancelSubscribe)"
+    (sucess)="this.showSubscribe = !showSubscribe"
   />
 }
 <div class="container" id="start">

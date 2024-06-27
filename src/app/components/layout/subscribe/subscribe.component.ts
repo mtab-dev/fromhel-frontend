@@ -32,11 +32,13 @@ export class SubscribeComponent {
         email: this.clientEmail.toLowerCase()
       })
       .subscribe(
-        () => {
+        (response) => {
+          console.log(response)
           this.sucess.emit(true)
         },
-        () => {
-          this.sucess.emit(false)
+        (error) => {
+          console.log(error)
+          this.sucess.emit(true)
         }
       )
   }
