@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { InputComponent } from '../../ui/input/input.component'
 import { ButtonComponent } from '../../ui/button/button.component'
 import { HttpClient } from '@angular/common/http'
@@ -19,22 +19,24 @@ export class SubscribeComponent {
 
   constructor(private httpClient: HttpClient) {}
 
+  @Output() sucess: EventEmitter<boolean> = new EventEmitter<boolean>()
+
   submit() {
     // const apiUrl = ENVIROMENTS.API_URL
 
     if (!this.name || !this.clientEmail) return
 
     this.httpClient
-      .post('https://fromhel-backend.vercel.app/register', {
+    .post('https://fromhel-backend.vercel.app/register', {
         clientName: this.name.toUpperCase(),
         email: this.clientEmail.toLowerCase()
       })
       .subscribe(
-        (response) => {
-          console.log('Registro concluído com sucesso!', response)
+        () => {
+          this.sucess.emit(true)
         },
-        (error) => {
-          console.error('Erro ao registrar cliente:', error)
+        () => {
+          this.sucess.emit(false)
         }
       )
   }

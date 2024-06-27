@@ -1,5 +1,8 @@
 @if (this.showSubscribe) {
-  <app-subscribe [handleCancelSubscribe]="handleCancelSubscribe" />
+  <app-subscribe
+    [handleCancelSubscribe]="handleCancelSubscribe"
+    (sucess)="(handleCancelSubscribe)"
+  />
 }
 <div class="container" id="start">
   <div class="brand-container">
@@ -13,7 +16,7 @@
   <article>
     <section class="section" id="about-bullet">
       <img src="/bulletHouse.png" id="bulletHouse" />
-      <h1>BulletSpell</h1>
+      <h1>BULLET SPEEL</h1>
       <p>
         "BulletSpeel: A odisseia de João e Maria", primeiro jogo feito pela
         FromHel, produzido antes de oficialmente nos tornamos uma empresa. Foi
