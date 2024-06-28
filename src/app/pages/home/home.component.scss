@@ -1,18 +1,34 @@
-.container {
-  .brand-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    img {
-      width: 90%;
-      margin-bottom: 100px;
-      @media (min-width: 900px) {
+.brand-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 40px;
+  justify-content: center;
+  flex-direction: column;
+  height: 60vh;
+  gap: 20px;
+  background-size: cover;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  background-image: url(/bulletGameplay.jpg);
+  background-blend-mode: multiply;
+  margin-bottom: 100px;
+  section {
+    @media (min-width: 900px) {
+      img {
         width: 50%;
       }
     }
-    margin-bottom: 100px;
+    @media (max-width: 900px) {
+      img {
+        width: 70%;
+      }
+    }
   }
+  section#buttons-control {
+    display: flex;
+    gap: 10px;
+  }
+}
+.container {
   article {
     @media (min-width: 900px) {
       width: 60%;
