@@ -15,14 +15,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "customWebpackConfig": {
-              "path": "./webpack.config.js"
-            },
             "outputPath": "dist/fromhel-frontend",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "browser": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -60,16 +57,13 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
-          "options": {
-            "browserTarget": "fromhel-frontend:build"
-          },
+          "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "fromhel-frontend:build:production"
+              "buildTarget": "fromhel-frontend:build:production"
             },
             "development": {
-              "browserTarget": "fromhel-frontend:build:development"
+              "buildTarget": "fromhel-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -95,8 +89,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "bd5d8774-da92-4584-9e1e-5d82f6d552d8"
   }
 }
