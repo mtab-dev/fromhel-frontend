@@ -1,7 +1,7 @@
-@use '../../../../styles.scss';
+$obsidian: #110f0f;
 
 .inp {
-  background-color: styles.$obsidian;
+  background-color: $obsidian;
   border: 0;
   border-bottom: 2px solid gray;
   height: 35px;

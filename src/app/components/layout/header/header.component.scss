@@ -1,5 +1,4 @@
-@use '../../../../styles.scss';
-
+$obsidian: #110f0f;
 $headerSize: 180px;
 
 .app-header {
@@ -8,7 +7,7 @@ $headerSize: 180px;
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba($color: styles.$obsidian, $alpha: 0.3);
+  background-color: rgba($color: $obsidian, $alpha: 0.3);
   backdrop-filter: blur(25px);
   display: flex;
   align-items: center;
@@ -30,14 +29,14 @@ $headerSize: 180px;
     top: 136px;
     align-items: flex-end;
     flex-direction: column;
-    background-color: rgba($color: styles.$obsidian, $alpha: 0.3);
+    background-color: rgba($color: $obsidian, $alpha: 0.3);
     backdrop-filter: blur(25px);
     z-index: 2;
     @media (max-width: 899px) {
       top: 0;
       left: 0;
       height: 100vh;
-      background-color: styles.$obsidian;
+      background-color: $obsidian;
       justify-content: center;
       padding-bottom: 5cm;
       animation-name: blurAnima;

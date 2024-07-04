@@ -1,4 +1,4 @@
-@use '../../../../styles.scss';
+$obsidian: #110f0f;
 
 .overlay {
   position: fixed;
@@ -6,7 +6,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba($color: styles.$obsidian, $alpha: 0.3);
+  background-color: rgba($color: $obsidian, $alpha: 0.3);
   backdrop-filter: blur(25px);
   animation-name: openingAnima;
   animation-duration: 1s;
@@ -22,7 +22,7 @@
 
 .links {
   padding: 40px;
-  background-color: styles.$obsidian;
+  background-color: $obsidian;
   position: fixed;
   z-index: 3;
   top: 50%;
