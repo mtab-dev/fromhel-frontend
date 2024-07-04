@@ -8,7 +8,7 @@ import {
   ReactiveFormsModule,
   Validators
 } from '@angular/forms'
-// import { ENVIROMENTS } from '../../../config/env'
+import { ToastrService } from 'ngx-toastr'
 
 @Component({
   selector: 'app-subscribe',
@@ -22,42 +22,52 @@ export class SubscribeComponent {
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email])
   })
-  name: string = ''
-  clientEmail: string = ''
 
   @Input() handleCancelSubscribe: () => void = () => {}
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(
+    private httpClient: HttpClient,
+    private toastr: ToastrService
+  ) {}
 
   @Output() sucess: EventEmitter<boolean> = new EventEmitter<boolean>()
 
   submit() {
     if (this.userForm.status != 'VALID') {
+      if (
+        this.userForm.get('name')?.hasError('required') ||
+        this.userForm.get('email')?.hasError('required')
+      ) {
+        this.toastr.error(
+          'Por favor, preencha todos os dados.',
+          'Dados incorretos!'
+        )
+        return
+      }
+      if (this.userForm.get('email')?.hasError('email')) {
+        this.toastr.error(
+          'Por favor, preecha um e-mail valido.',
+          'Dados incorretos!'
+        )
+      }
       return
     }
 
+    const email = this.userForm.get('email')?.value ?? ''
+    const name = this.userForm.get('name')?.value ?? ''
+
     this.httpClient
       .post('https://fromhel-backend.vercel.app/register', {
-        clientName: this.name.toUpperCase(),
-        email: this.clientEmail.toLowerCase()
+        clientName: name.toUpperCase(),
+        email: email.toLowerCase()
       })
       .subscribe(
-        (response) => {
-          console.log(response)
+        () => {
           this.sucess.emit(true)
         },
-        (error) => {
-          console.log(error)
-          this.sucess.emit(true)
+        () => {
+          this.sucess.emit(false)
         }
       )
-  }
-
-  handleNameChange(value: string): void {
-    this.name = value
-  }
-
-  handleEmailChange(value: string): void {
-    this.clientEmail = value
   }
 }

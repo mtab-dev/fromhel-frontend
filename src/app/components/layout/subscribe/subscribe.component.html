@@ -5,7 +5,6 @@
     placeholder="Digite seu nome"
     id="name"
     name="name"
-    (valueChange)="handleNameChange($event)"
     [control]="userForm.controls['name']"
   />
   <label for="email">Email:</label>
@@ -14,7 +13,6 @@
     id="email"
     name="email"
     type="email"
-    (valueChange)="handleEmailChange($event)"
     [control]="userForm.controls['email']"
   />
   <div>
