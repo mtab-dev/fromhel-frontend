@@ -2,6 +2,7 @@ import { Component, ChangeDetectorRef } from '@angular/core'
 import { ButtonComponent } from '../../components/ui/button/button.component'
 import { InputComponent } from '../../components/ui/input/input.component'
 import { SubscribeComponent } from '../../components/layout/subscribe/subscribe.component'
+import { ToastrService } from 'ngx-toastr'
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,10 @@ import { SubscribeComponent } from '../../components/layout/subscribe/subscribe.
 export class HomeComponent {
   showSubscribe: boolean = false
 
-  constructor(private cdr: ChangeDetectorRef) {
+  constructor(
+    private cdr: ChangeDetectorRef,
+    private toastr: ToastrService
+  ) {
     document.addEventListener('keydown', (e) => {
       if (e.key.toLowerCase() !== 'escape') return
       this.showSubscribe = false
@@ -27,7 +31,14 @@ export class HomeComponent {
   }
 
   handleSubscribeOutput(value: boolean) {
-    this.showSubscribe = !value
+    console.log(value)
+    if (!value) {
+      this.toastr.error('Usuário já existente.', 'Erro!')
+      return
+    }
+
+    this.toastr.success('Usuário cadastrado com sucesso.', 'Sucesso!')
+    this.handleCancelSubscribe()
   }
 
   redirect(where: string): void {
