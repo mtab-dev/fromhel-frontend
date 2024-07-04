@@ -1,11 +1,12 @@
 <div class="overlay"></div>
-<div class="container">
+<form class="container" [formGroup]="userForm" (ngSubmit)="submit()">
   <label for="name">Nome:</label>
   <app-input
     placeholder="Digite seu nome"
     id="name"
     name="name"
     (valueChange)="handleNameChange($event)"
+    [control]="userForm.controls['name']"
   />
   <label for="email">Email:</label>
   <app-input
@@ -14,13 +15,14 @@
     name="email"
     type="email"
     (valueChange)="handleEmailChange($event)"
+    [control]="userForm.controls['email']"
   />
   <div>
-    <app-button text="Enviar" (click)="submit()" />
+    <app-button text="Enviar" (click)="submit()" type="submit" />
     <app-button
       text="Cancelar"
       (click)="handleCancelSubscribe()"
       variant="secondary"
     />
   </div>
-</div>
+</form>

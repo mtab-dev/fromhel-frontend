@@ -2,16 +2,26 @@ import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { InputComponent } from '../../ui/input/input.component'
 import { ButtonComponent } from '../../ui/button/button.component'
 import { HttpClient } from '@angular/common/http'
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators
+} from '@angular/forms'
 // import { ENVIROMENTS } from '../../../config/env'
 
 @Component({
   selector: 'app-subscribe',
   standalone: true,
-  imports: [InputComponent, ButtonComponent],
+  imports: [InputComponent, ButtonComponent, ReactiveFormsModule],
   templateUrl: './subscribe.component.html',
   styleUrl: './subscribe.component.scss'
 })
 export class SubscribeComponent {
+  userForm = new FormGroup({
+    name: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email])
+  })
   name: string = ''
   clientEmail: string = ''
 
@@ -22,7 +32,9 @@ export class SubscribeComponent {
   @Output() sucess: EventEmitter<boolean> = new EventEmitter<boolean>()
 
   submit() {
-    if (!this.name || !this.clientEmail) return
+    if (this.userForm.status != 'VALID') {
+      return
+    }
 
     this.httpClient
       .post('https://fromhel-backend.vercel.app/register', {
