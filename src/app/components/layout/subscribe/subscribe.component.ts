@@ -22,12 +22,10 @@ export class SubscribeComponent {
   @Output() sucess: EventEmitter<boolean> = new EventEmitter<boolean>()
 
   submit() {
-    // const apiUrl = ENVIROMENTS.API_URL
-
     if (!this.name || !this.clientEmail) return
 
     this.httpClient
-    .post('https://fromhel-backend.vercel.app/register', {
+      .post('https://fromhel-backend.vercel.app/register', {
         clientName: this.name.toUpperCase(),
         email: this.clientEmail.toLowerCase()
       })
