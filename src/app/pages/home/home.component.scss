@@ -12,14 +12,15 @@
   background-blend-mode: multiply;
   margin-bottom: 100px;
   section {
+    padding: 40px 0;
     @media (min-width: 900px) {
       img {
-        width: 50%;
+        width: 30%;
       }
     }
     @media (max-width: 900px) {
       img {
-        width: 70%;
+        width: 50%;
       }
     }
   }
