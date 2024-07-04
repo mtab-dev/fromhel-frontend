@@ -12,7 +12,6 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms'
       [placeholder]="placeholder"
       [name]="name"
       [formControl]="control"
-      (input)="onInputChange($event)"
       autocomplete="off"
       class="inp"
     />
@@ -25,11 +24,4 @@ export class InputComponent {
   @Input() placeholder: string = ''
   @Input() name: string = ''
   @Input() control!: FormControl
-
-  @Output() valueChange: EventEmitter<string> = new EventEmitter<string>()
-
-  onInputChange(event: Event): void {
-    const value = (event.target as HTMLInputElement).value
-    this.valueChange.emit(value)
-  }
 }
