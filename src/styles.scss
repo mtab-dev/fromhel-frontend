@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'ngx-toastr/toastr';
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@200;300;400;500&family=Audiowide&family=Oswald:wght@200;300;400;500;600&display=swap');
 
 $obsidian: #110f0f;
 
@@ -7,7 +8,8 @@ $obsidian: #110f0f;
   color: #fff;
   margin: 0;
   padding: 0;
-  font-family: 'Inter Tight', sans-serif;
+  font-family: 'Oswald', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   line-height: 1.6;
 }
 
