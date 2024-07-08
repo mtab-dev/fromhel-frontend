@@ -30,8 +30,7 @@ $headerSize: 180px;
     top: 136px;
     align-items: flex-end;
     flex-direction: column;
-    background-color: rgba($color: $obsidian, $alpha: 0.3);
-    backdrop-filter: blur(25px);
+    background-color: rgba($color: $obsidian, $alpha: 1);
     z-index: 2;
     @media (max-width: 899px) {
       top: 0;
