@@ -4,49 +4,29 @@
     (sucess)="handleSubscribeOutput($event)"
   />
 }
-<div id="start">
-  <div class="brand-container">
-    <section id="logo-container">
-      <img src="/bulletLogo.png" class="no-shadow" />
-      <p style="margin-top: 5px">Inscreva-se agora para o beta preview.</p>
-    </section>
-    <section id="buttons-control">
-      <app-button
-        text="saiba mais"
-        type="button"
-        (click)="redirect('home#about-bullet')"
-      />
-      <app-button
-        text="inscreva-se"
-        variant="secondary"
-        (click)="showSubscribe = !showSubscribe"
-      ></app-button>
-    </section>
+<div class="brand-section">
+  <div class="brand-content">
+    <img src="/bulletLogo.png" id="bullet-speel-logo" />
+    <h4>INSCREVA-SE AGORA PARA O BETA</h4>
+    <div class="flex">
+      <app-button text="INSCREVER" (click)="showSubscribe = true" />
+      <app-button text="SAIBA MAIS" variant="secondary" />
+    </div>
   </div>
-  <div class="container">
-    <article>
-      <section class="section" id="about-bullet">
-        <img src="/bulletHouse.png" id="bulletHouse" />
-        <p>
-          "BulletSpeel: A odisseia de João e Maria", primeiro jogo feito pela
-          FromHel, produzido antes de oficialmente nos tornamos uma empresa. Foi
-          feito exclusivamente para o festival de jogos da Etec Heliópolis de
-          2023, e eleito o vencedor unânime. O jogo fala sobre o clássico conto
-          de João e Maria, mas de uma forma peculiar... Maria foi sequestrada
-          pela Bruxa e agora joão vai ao seu resgate!
-        </p>
-        <p>
-          Abaixo você pode acessar o jogo pela plataforma <i>Itch.io</i>. Ao
-          clicar no botão você será redirecionado para nosso perfil.
-        </p>
-      </section>
-      <section class="action-buttons">
-        <app-button
-          text="itch.io"
-          variant="primary"
-          (click)="redirect('https://fromhel-studio.itch.io')"
-        ></app-button>
-      </section>
-    </article>
+</div>
+<div class="container">
+  <app-news></app-news>
+  <div class="last-video">
+    <h2>Assista nosso último vídeo!</h2>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/r4z8bIq7CSc?si=sc_Y2Hrh1MD1iGyD"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
   </div>
 </div>

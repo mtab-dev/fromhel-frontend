@@ -3,11 +3,12 @@ import { ButtonComponent } from '../../components/ui/button/button.component'
 import { InputComponent } from '../../components/ui/input/input.component'
 import { SubscribeComponent } from '../../components/layout/subscribe/subscribe.component'
 import { ToastrService } from 'ngx-toastr'
+import { NewsComponent } from '../../components/layout/news/news.component'
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ButtonComponent, InputComponent, SubscribeComponent],
+  imports: [ButtonComponent, InputComponent, SubscribeComponent, NewsComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
