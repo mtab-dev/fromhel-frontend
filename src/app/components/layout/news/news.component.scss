@@ -19,6 +19,10 @@
   justify-content: end;
   text-align: left;
   flex-direction: column;
+  @media (max-width: 900px) {
+    height: 100vh !important;
+    background-size: cover !important;
+  }
 }
 
 .item-a {
