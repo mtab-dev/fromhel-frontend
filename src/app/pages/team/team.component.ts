@@ -146,6 +146,30 @@ export class TeamComponent implements OnInit, OnDestroy {
         }
       ],
       show: false
+    },
+    {
+      name: 'Christian Leme',
+      role: 'Editor de som e vídeo',
+      image: 'christian.png',
+      social: [
+        {
+          name: 'Instagram',
+          url: 'https://www.instagram.com/_x_xchrisx_x_'
+        }
+      ],
+      show: false
+    },
+    {
+      name: 'Malu Moscardo',
+      role: 'Social manager',
+      image: 'malu.png',
+      social: [
+        {
+          name: 'Instagram',
+          url: 'https://www.instagram.com/malumsc'
+        }
+      ],
+      show: false
     }
   ]
 
