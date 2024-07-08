@@ -10,7 +10,11 @@
     <h4>INSCREVA-SE AGORA PARA O BETA</h4>
     <div class="flex">
       <app-button text="INSCREVER" (click)="showSubscribe = true" />
-      <app-button text="SAIBA MAIS" variant="secondary" />
+      <app-button
+        text="SAIBA MAIS"
+        variant="secondary"
+        (click)="redirect('home#bullet')"
+      />
     </div>
   </div>
 </div>
