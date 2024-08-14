@@ -63,6 +63,10 @@ export class TeamComponent implements OnInit, OnDestroy {
         {
           name: 'X',
           url: 'https://x.com/Bizare_Ande'
+        },
+        {
+          name: 'ArtStation',
+          url: 'https://www.artstation.com/user-8373353'
         }
       ],
       show: false
