@@ -1,5 +1,5 @@
 $obsidian: #110f0f;
-$headerSize: 180px;
+$headerSize: 142px;
 
 .app-header {
   padding: 40px;
@@ -14,10 +14,11 @@ $headerSize: 180px;
   align-items: center;
   justify-content: space-between;
   #logo {
-    height: 100px;
-    width: 200px;
+    height: 60px;
+    width: 160px;
     background-image: url('/logo.webp');
     background-size: cover;
+    background-repeat: no-repeat;
     background-position-y: -21px;
     background-position-x: -18px;
     z-index: 3;
