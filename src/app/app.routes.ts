@@ -14,7 +14,7 @@ export const routes: Routes = [
     title: 'FromHel Studio | Equipe'
   },
   {
-    path: '**',
+    path: '',
     redirectTo: 'home',
     pathMatch: 'full'
   }
