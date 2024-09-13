@@ -45,4 +45,8 @@ export class HomeComponent {
   redirect(where: string): void {
     location.href = where
   }
+
+  download(){
+    this.redirect('/bullet.apk')
+  }
 }
