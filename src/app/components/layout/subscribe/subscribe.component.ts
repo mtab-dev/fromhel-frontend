@@ -57,7 +57,7 @@ export class SubscribeComponent {
     const name = this.userForm.get('name')?.value ?? ''
 
     this.httpClient
-      .post('https://fromhel-backend.vercel.app/register', {
+      .post('https://fromhel-backend-6b041d9c3e91.herokuapp.com/register', {
         clientName: name.toUpperCase(),
         email: email.toLowerCase()
       })
